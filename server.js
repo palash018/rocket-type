@@ -62,6 +62,7 @@ function dis(socket_id){
   }
   if(a){
     io.sockets.in(a).emit('leave',socket_id);
+    Socket_list.delete(socket_id);
   }
 }
 
