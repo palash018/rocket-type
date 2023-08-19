@@ -39,6 +39,7 @@ exports.signin = async(request,response) => {
         return response.status(200).json({ err: `password does not match`})
        }
     } catch (error) {
+        console.log(error);
         response.status(500).json({ err: `error while login the user` })
     }
 }
